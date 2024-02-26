@@ -1,0 +1,120 @@
+img{
+    width: 100px;
+} 
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+#MainTitle {
+    font-family: Georgia, Times, serif;
+    font-size: 25px;
+    font-style: italic;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a:hover {
+	background-color: royalblue;
+}
+
+#SignUp:target {
+    display: block;
+}
+
+#SignUp {
+    display: none;
+    padding: 20px;
+    grid-area: SignUp;
+}
+
+#MainBar{
+  color: white;
+  /*background-color: rgb(215, 188, 240);
+  border: 3px solid indigo;*/
+  padding: 10px;
+  margin: 10px;
+  grid-area: header;
+}
+
+#books{
+    display: inline-block ;
+    flex-grow: 1;
+    grid-area: books;
+}
+
+#abcdef{
+    display: inline;
+    display: flex;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    width: 20px;
+    padding: 10px;
+    float: right;
+    justify-content: center;
+   /*position: fixed;*/
+    grid-area: abcdef;
+}
+
+div{
+    /*border: 3px solid indigo;*/
+    gap: 7px;
+    padding: 12px;
+}
+
+#contacto{
+    grid-area: contacto;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-areas:
+    "header   header header"
+    "SignUp SignUp SignUp"
+    "books books  abcdef"
+    "contacto   contacto contacto";
+    gap: 7px;
+  padding: 12px;
+}
+
+td{
+    border-top: 1px solid #bfbfbf;
+}
+
+table{
+    width: 100%;
+}
+
+
+.contenedor {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    background: dodgerblue;
+    padding: 0;
+  }
+  .contenedor li {
+    flex: 1 1 0;
+    font: 14px sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 9px;
+    color: white;
+    user-select: none;
+  }
+  
+  .contenedor a {
+    font: 14px sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 9px;
+    color: white;
+    user-select: none;
+  }
+  .contenedor li:hover {
+    background: royalblue;
+  }
+  

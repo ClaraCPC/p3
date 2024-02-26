@@ -1,0 +1,87 @@
+img{
+    width: 40px;
+    border-radius: 50%;
+} 
+
+a:hover {
+	background-color: royalblue;
+}
+
+table {
+    border-collapse:separate;
+    border-spacing:0 15px;
+}
+
+
+
+#Volver {
+    display: none;
+    padding: 20px;
+    grid-area: Volver;
+}
+
+#MainBar{
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  grid-area: header;
+}
+
+div{
+    /*border: 3px solid indigo;*/
+    gap: 7px;
+    padding: 12px;
+}
+
+#contacto{
+    grid-area: contacto;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas:
+    "header   header header"
+    "Main Main  Main"
+    "contacto   contacto contacto";
+    gap: 7px;
+    padding: 12px;
+}
+
+table{
+    width: 100%;
+}
+
+
+.contenedor {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    background: dodgerblue;
+    padding: 0;
+  }
+  
+  .contenedor li {
+    flex: 1 1 0;
+    font: 14px sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 9px;
+    color: white;
+    user-select: none;
+  }
+  
+  .contenedor a {
+    font: 14px sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 9px;
+    color: white;
+    user-select: none;
+  }
+  .contenedor li:hover {
+    background: royalblue;
+  }
+  
