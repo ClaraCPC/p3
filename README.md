@@ -10,10 +10,10 @@ Notas:
 
 Dado el tamaño de la api, las requests son muy lentes por lo que hay que tener mucha paciencia. Eventualmente aparecen los resultados.
 
-La página principal funciona igual que la de la práctica anterior
+La página principal funciona igual que la de la práctica anterior:
 
-  'signup' permite aputnarse con usuario y correo electrónico, donde el resultado es recogido. 
+ - 'signup' permite aputnarse con usuario y correo electrónico, donde el resultado es recogido. 
   
-  'contacto' lleva al footer donde está la información de contacto.
+ - 'contacto' lleva al footer donde está la información de contacto.
   
-  el correo electrónico de abajo crea un correo directamente para contactar a la página
+ - el correo electrónico de abajo crea un correo directamente para contactar a la página
