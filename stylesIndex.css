@@ -74,11 +74,14 @@ table{
     padding: 0;
   }
 
+  .contenedor li {
+    flex: 4 1 0;
+  }
+/*
 .contenedor > #MainTitle {
   flex: 4 0 0;
-
 }
-
+*/
   .contenedor li {
     font: 14px sans-serif;
     text-align: center;
