@@ -12,10 +12,9 @@ a:hover {
 	background-color: royalblue;
 }
 
-
-
 #SignUp:target {
     display: block;
+    grid-area: SignUp;
 }
 
 #SignUp {
@@ -26,7 +25,7 @@ a:hover {
 
 #MainBar{
   color: white;
-  /*background-color: rgb(215, 188, 240);
+  /*
   border: 3px solid indigo;
   padding: 10px;
   margin: 10px;*/
@@ -39,7 +38,7 @@ a:hover {
 
 
 div{
-    border: 3px solid indigo;
+    border: 3px solid rgb(248, 4, 4);
     gap: 7px;
     padding: 12px;
 }
