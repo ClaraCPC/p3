@@ -39,7 +39,7 @@ a:hover {
 
 
 div{
-    /*border: 3px solid indigo;*/
+    border: 3px solid indigo;
     gap: 7px;
     padding: 12px;
 }
@@ -78,7 +78,7 @@ table{
     padding: 0;
   }
 
-.contenedor > #MainTitleid {
+.contenedor > #MainTitle {
   flex: 4 0 0;
 
 }
@@ -96,11 +96,11 @@ table{
   .contenedor a {
     font: 14px sans-serif;
     text-align: center;
-    line-height: 100px; /* Example height */
+    line-height: 100px; 
     text-decoration: none;
     display: block;
     padding: 9px;
-    color: white;
+    color: rgb(255, 255, 255);
     user-select: none;
   }
   .contenedor li:hover {
