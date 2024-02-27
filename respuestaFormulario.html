@@ -8,37 +8,16 @@
             // Obtener los parámetros de la URL (en el caso de un formulario GET)
             const urlParams = new URLSearchParams(window.location.search);
             const nombre = urlParams.get('nombre');
-            const telefono = urlParams.get('telefono');
+            const telefono = urlParams.get('username');
             const mail = urlParams.get('mail');
-            const modelo = urlParams.get('modelo');
-            const tamano = urlParams.get('tamano');
-            const color = urlParams.get('color');
-            const cantidad = urlParams.get('cantidad');
-            const extra1 = urlParams.get('extra1');
-            const extra2 = urlParams.get('extra2');
-            const extra3 = urlParams.get('extra3');
-            const fecha = urlParams.get('fecha');
-            const instrucciones = urlParams.get('instrucciones');
             
             // Mostrar los datos recuperados en la página
             document.body.innerHTML = `
               <h1>Ejemplo PAT - Datos del formulario enviado:</h1>
               <h2>Datos personales:</h2>
               <p>Nombre: ${nombre}</p>
-              <p>Teléfono: ${telefono}</p>
+              <p>Username: ${username}</p>
               <p>Teléfono: ${mail}</p>
-              <h2>Producto:</h2>
-              <p>Modelo: ${modelo}</p>
-              <p>Tamano: ${tamano}</p>
-              <p>Color: ${color}</p>
-              <p>Cantidad: ${cantidad}</p>
-              <p>Extra1: ${extra1}</p>
-              <p>Extra2: ${extra2}</p>
-              <p>Extra3: ${extra3}</p>
-              <h2>Entrega:</h2>
-              <p>Fecha: ${fecha}</p>
-              <p>Introcciones: ${instrucciones}</p>
-
             `;
           </script>
     </body>

@@ -1,77 +1,3 @@
-<!--
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Main Page</title>
-    <link rel="stylesheet" href="stylesIndex.css">
-  </head>
-  <body>
-
-    <header class = "headder"id="MainBar">
-      <ul class="contenedor">
-        <li><a href="#contacto">Contacto</a></li>
-        <li><h1 id = 'MainTitle'>Bookworm Review</h1></li>
-        <li><a id = 'SignUp1' href="#SignUp">SignUp</a></li>
-       </ul>
-      </header>
-    
-    <div>
-    <section id="SignUp">
-      <form>
-       <fieldset>
-        <legend>Usuario</legend>
-        <p>
-         <label for="name_id">Nombre:</label><br>
-         <input type="text" name="name" id="name_id" required>
-        </p>
-        <p>
-          <label for="username">Nombre de Usuario:</label><br>
-          <input type="text" name="username" id="username_id">
-         </p>
-        <p>
-         <label for="email_id">Email:</label><br>
-         <input type="email" name="email" id="email_id">
-        </p>
-        <p>
-          <input type="submit" value="Enviar">
-        </p>
-      </form>
-      </section>
-    </div>
-
-    <body class="books" id="books">
-      <h1><input type="text" id="search" placeholder="Enter book title"> &#128269</h1><br>
-      <ul id="results-list">empty for now</ul>
-      <div id="book-details"></div>
-
-      <table >
-          <tbody>
-            <tr id="Book">
-              <td id = "title"></td>
-              <td id = "Author"></td>
-              <td id = "Year"></td>
-              <td id = "Reviw"></td>
-            </tr>
-            
-          </tbody>
-      </table>
-  </body>
-    
-    <footer class="contacto" id="contacto">
-      <ul class="contenedor">
-        <li>Tlf: 91 6886381</li>
-        <li> mail: <a href="mailto:books@gmail.com?subject=Asunto&body=Contenido">books@gmail.com</a></li>
-        <li><a href="#">Inicio</a></li>
-       </ul>
-      </footer>
-      <script src="titulos.js">
-      </script>
-  </body>
-</html>
-
--->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -91,6 +17,25 @@
     </ul>
   </header>
 
+
+
+  <body class="books" id="books">
+    <h1><input type="text" id="search" placeholder="Enter book title"> &#128269</h1>
+    <h6 id="book-details"></h6>
+    <h6 id="divLista"></h6>
+
+    <table id = 'results'>
+      <tbody>
+        <tr id="Book">
+          <td id="title"></td>
+          <td id="Author"></td>
+          <td id="Year"></td>
+          <td id="Review"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </body>
   <div>
     <section id="SignUp">
       <form>
@@ -115,25 +60,6 @@
       </form>
     </section>
   </div>
-
-  <body class="books" id="books">
-    <h1><input type="text" id="search" placeholder="Enter book title"> &#128269</h1>
-    <h6 id="book-details"></h6>
-    <h6 id="divLista"></h6>
-
-    <table id = 'results'>
-      <tbody>
-        <tr id="Book">
-          <td id="title"></td>
-          <td id="Author"></td>
-          <td id="Year"></td>
-          <td id="Review"></td>
-        </tr>
-      </tbody>
-    </table>
-
-  </body>
-
   <footer class="contacto" id="contacto">
     <ul class="contenedor">
       <li>Tlf: 91 6886381</li>
@@ -142,57 +68,7 @@
     </ul>
   </footer>
 
-  <!--<script src="titulos.js"></script>-->
-  <script>
-    const searchBar = document.getElementById('search');
-    const selector = document.createElement('select');
-    selector.id = 'titulo';
-
-    searchBar.addEventListener('keyup', function (event) {
-      const tituloBuscado = event.target.value;
-      if (tituloBuscado.length > 2) {
-        setTimeout(() => {
-          if (tituloBuscado !== searchBar.value) return;
-          busqueda(tituloBuscado);
-        }, 1000);
-      }
-    });
-
-    function busqueda(tituloBuscado) {
-      fetch(`https://openlibrary.org/search.json?q=${tituloBuscado}`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          const docs = data.docs;
-          selector.innerHTML = ''; // Clear the select options
-          docs.forEach(book => {
-            const option = document.createElement('option');
-            option.value = book.title;
-            option.textContent = book.title;
-            selector.appendChild(option);
-          });
-          const divLista = document.getElementById('divLista');
-          if (!divLista) {
-            const container = document.getElementById('books');
-            divLista = document.createElement('div');
-            divLista.id = 'divLista';
-            container.appendChild(divLista);
-          }
-          divLista.innerHTML = ''; // Clear the previous content
-          const labelTitulos = document.createElement('label');
-          labelTitulos.textContent = 'Los títulos posibles son:';
-          divLista.appendChild(labelTitulos);
-          divLista.appendChild(selector);
-        })
-        .catch(error => {
-          console.error('There was a problem with your fetch operation:', error);
-        });
-    }
-  </script>
+ <script src="titulos.js"></script>
 </body>
 </html>
 
