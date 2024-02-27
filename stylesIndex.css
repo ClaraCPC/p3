@@ -1,9 +1,3 @@
-img{
-    width: 100px;
-} 
-img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  }
 
 #MainTitle {
     font-family: Georgia, Times, serif;
@@ -18,6 +12,8 @@ a:hover {
 	background-color: royalblue;
 }
 
+
+
 #SignUp:target {
     display: block;
 }
@@ -31,30 +27,16 @@ a:hover {
 #MainBar{
   color: white;
   /*background-color: rgb(215, 188, 240);
-  border: 3px solid indigo;*/
+  border: 3px solid indigo;
   padding: 10px;
-  margin: 10px;
+  margin: 10px;*/
   grid-area: header;
 }
 
-#books{
-    display: inline-block ;
-    flex-grow: 1;
-    grid-area: books;
+#search{
+  text-align: center;
 }
 
-#abcdef{
-    display: inline;
-    display: flex;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    width: 20px;
-    padding: 10px;
-    float: right;
-    justify-content: center;
-   /*position: fixed;*/
-    grid-area: abcdef;
-}
 
 div{
     /*border: 3px solid indigo;*/
@@ -72,11 +54,12 @@ body{
     grid-template-areas:
     "header   header header"
     "SignUp SignUp SignUp"
-    "books books  abcdef"
+    "books books  books"
     "contacto   contacto contacto";
     gap: 7px;
   padding: 12px;
 }
+
 
 td{
     border-top: 1px solid #bfbfbf;
@@ -94,8 +77,13 @@ table{
     background: dodgerblue;
     padding: 0;
   }
+
+.contenedor > #MainTitleid {
+  flex: 4 0 0;
+
+}
+
   .contenedor li {
-    flex: 1 1 0;
     font: 14px sans-serif;
     text-align: center;
     text-decoration: none;
@@ -108,6 +96,7 @@ table{
   .contenedor a {
     font: 14px sans-serif;
     text-align: center;
+    line-height: 100px; /* Example height */
     text-decoration: none;
     display: block;
     padding: 9px;
