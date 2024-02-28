@@ -12,6 +12,8 @@ Notas:
 
 Dado el tamaño de la api, las requests son muy lentes por lo que hay que tener mucha paciencia. Eventualmente aparecen los resultados.
 
+La búsqueda en la api se realiza por título, y la api busca en todos los libros cuyo titulo contiene las palabras de la query pero no necesariamente en ese orden.
+
 La página principal funciona igual que la de la práctica anterior:
 
  - 'signup' permite aputnarse con usuario y correo electrónico, donde el resultado es recogido. 
